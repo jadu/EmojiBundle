@@ -1,0 +1,19 @@
+parameters:
+    emoji.emoji.class: 'HeyUpdate\Emoji\Emoji'
+    emoji.emoji_index.class: 'HeyUpdate\Emoji\EmojiIndex'
+    emoji.twig.extension.class: 'HeyUpdate\EmojiBundle\Twig\Extension\EmojiExtension'
+
+services:
+    emoji:
+        class: %emoji.emoji.class%
+        arguments: ['@emoji.index', '%emoji.asset_url_format%']
+
+    emoji.index:
+        class: %emoji.emoji_index.class%
+
+    emoji.twig.extension:
+        class: %emoji.twig.extension.class%
+        arguments: ['@emoji']
+        public: false
+        tags:
+            - { name: twig.extension }
