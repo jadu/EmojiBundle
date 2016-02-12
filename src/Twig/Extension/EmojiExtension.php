@@ -14,23 +14,24 @@ class EmojiExtension extends \Twig_Extension
     }
 
     /**
-     * Returns a list of global functions to add to the existing list.
-     *
-     * @return array An array of global functions
+     * {@inheritdoc}
      */
     public function getFunctions()
     {
         return array(
-            'emoji'  => new \Twig_Function_Method($this, 'emoji', array(
+            new \Twig_SimpleFunction('emoji', array($this, 'emoji'), array(
                 'is_safe' => array('html')
             ))
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getFilters()
     {
         return array(
-            'emoji' => new \Twig_Filter_Method($this, 'emoji', array(
+            new \Twig_SimpleFilter('emoji', array($this, 'emoji'), array(
                 'is_safe' => array('html')
             ))
         );
