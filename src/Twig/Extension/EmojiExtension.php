@@ -18,11 +18,11 @@ class EmojiExtension extends \Twig_Extension
      */
     public function getFunctions()
     {
-        return array(
-            new \Twig_SimpleFunction('emoji', array($this, 'emoji'), array(
-                'is_safe' => array('html')
-            ))
-        );
+        return [
+            new \Twig_SimpleFunction('emoji', [$this, 'emoji'], [
+                'is_safe' => ['html'],
+            ]),
+        ];
     }
 
     /**
@@ -30,11 +30,11 @@ class EmojiExtension extends \Twig_Extension
      */
     public function getFilters()
     {
-        return array(
-            new \Twig_SimpleFilter('emoji', array($this, 'emoji'), array(
-                'is_safe' => array('html')
-            ))
-        );
+        return [
+            new \Twig_SimpleFilter('emoji', [$this, 'emoji'], [
+                'is_safe' => ['html'],
+            ]),
+        ];
     }
 
     public function emoji($string)

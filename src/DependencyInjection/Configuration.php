@@ -14,7 +14,9 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('asset_url_format')->defaultValue('https://twemoji.maxcdn.com/36x36/%s.png')->end()
+                ->scalarNode('image_html_template')
+                    ->defaultValue('https://twemoji.maxcdn.com/36x36/%s.png')
+                ->end()
             ->end();
 
         return $treeBuilder;
