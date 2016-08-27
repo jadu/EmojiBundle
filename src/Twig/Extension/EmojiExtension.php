@@ -19,7 +19,10 @@ class EmojiExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('emoji', [$this, 'emoji'], [
+            new \Twig_SimpleFunction('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
+                'is_safe' => ['html'],
+            ]),
+            new \Twig_SimpleFunction('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
                 'is_safe' => ['html'],
             ]),
         ];
@@ -31,15 +34,13 @@ class EmojiExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('emoji', [$this, 'emoji'], [
+            new \Twig_SimpleFilter('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
+                'is_safe' => ['html'],
+            ]),
+            new \Twig_SimpleFilter('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
                 'is_safe' => ['html'],
             ]),
         ];
-    }
-
-    public function emoji($string)
-    {
-        return $this->emoji->replaceEmojiWithImages($string);
     }
 
     /**
