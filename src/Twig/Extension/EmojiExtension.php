@@ -25,6 +25,9 @@ class EmojiExtension extends \Twig_Extension
             new \Twig_SimpleFunction('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
                 'is_safe' => ['html'],
             ]),
+            new \Twig_SimpleFunction('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
+                'is_safe' => ['html'],
+            ]),
         ];
     }
 
@@ -38,6 +41,9 @@ class EmojiExtension extends \Twig_Extension
                 'is_safe' => ['html'],
             ]),
             new \Twig_SimpleFilter('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
+                'is_safe' => ['html'],
+            ]),
+            new \Twig_SimpleFilter('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
                 'is_safe' => ['html'],
             ]),
         ];
