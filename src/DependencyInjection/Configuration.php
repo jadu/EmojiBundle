@@ -15,7 +15,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('image_html_template')
-                    ->defaultValue('https://twemoji.maxcdn.com/36x36/%s.png')
+                    ->defaultValue('<img alt=":{{name}}:" class="emoji" src="https://twemoji.maxcdn.com/36x36/{{unicode}}.png">')
                 ->end()
             ->end();
 
