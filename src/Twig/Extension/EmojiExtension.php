@@ -3,8 +3,11 @@
 namespace HeyUpdate\EmojiBundle\Twig\Extension;
 
 use HeyUpdate\Emoji\Emoji;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 
-class EmojiExtension extends \Twig_Extension
+class EmojiExtension extends AbstractExtension
 {
     protected $emoji;
 
@@ -19,13 +22,13 @@ class EmojiExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
+            new TwigFunction('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
                 'is_safe' => ['html'],
             ]),
-            new \Twig_SimpleFunction('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
+            new TwigFunction('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
                 'is_safe' => ['html'],
             ]),
-            new \Twig_SimpleFunction('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
+            new TwigFunction('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
                 'is_safe' => ['html'],
             ]),
         ];
@@ -37,13 +40,13 @@ class EmojiExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
+            new TwigFilter('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
                 'is_safe' => ['html'],
             ]),
-            new \Twig_SimpleFilter('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
+            new TwigFilter('emoji_name_image', [$this->emoji, 'getEmojiImageByName'], [
                 'is_safe' => ['html'],
             ]),
-            new \Twig_SimpleFilter('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
+            new TwigFilter('emoji_unicode_image', [$this->emoji, 'getEmojiImageByUnicode'], [
                 'is_safe' => ['html'],
             ]),
         ];
