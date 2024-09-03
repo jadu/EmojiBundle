@@ -1,7 +1,7 @@
 parameters:
-    emoji.emoji.class: 'HeyUpdate\Emoji\Emoji'
-    emoji.emoji.index.class: 'HeyUpdate\Emoji\Index\CompiledIndex'
-    emoji.twig.extension.class: 'HeyUpdate\EmojiBundle\Twig\Extension\EmojiExtension'
+    emoji.emoji.class: 'Jadu\Emoji\Emoji'
+    emoji.emoji.index.class: 'Jadu\Emoji\Index\CompiledIndex'
+    emoji.twig.extension.class: 'Jadu\EmojiBundle\Twig\Extension\EmojiExtension'
 
 services:
     emoji:

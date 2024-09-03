@@ -1,9 +1,9 @@
 <?php
 
-namespace HeyUpdate\EmojiBundle;
+namespace Jadu\EmojiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class HeyUpdateEmojiBundle extends Bundle
+class JaduEmojiBundle extends Bundle
 {
 }

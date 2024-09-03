@@ -1,6 +1,6 @@
 <?php
 
-namespace HeyUpdate\EmojiBundle\DependencyInjection;
+namespace Jadu\EmojiBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -9,7 +9,7 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('hey_update_emoji');
+        $treeBuilder = new TreeBuilder('jadu_emoji');
         $rootNode = $treeBuilder->getRootNode();
 
         $rootNode

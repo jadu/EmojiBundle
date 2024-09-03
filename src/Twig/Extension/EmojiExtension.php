@@ -1,8 +1,8 @@
 <?php
 
-namespace HeyUpdate\EmojiBundle\Twig\Extension;
+namespace Jadu\EmojiBundle\Twig\Extension;
 
-use HeyUpdate\Emoji\Emoji;
+use Jadu\Emoji\Emoji;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
