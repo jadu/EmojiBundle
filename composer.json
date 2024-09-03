@@ -1,12 +1,12 @@
 {
-    "name": "heyupdate/emoji-bundle",
-    "description": "A Symfony2 bundle for the heyupdate/emoji component",
+    "name": "jadu/emoji-bundle",
+    "description": "A Symfony2 bundle for the jadu/emoji component",
     "keywords": ["emoji"],
     "type": "library",
     "license": "MIT",
     "require": {
         "php": ">=5.4.0",
-        "heyupdate/emoji": "^1.0.0",
+        "jadu/emoji": "^1.0.0",
         "symfony/framework-bundle": "^5.0",
         "twig/twig": "^2.0"
     },
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "HeyUpdate\\EmojiBundle\\": "src/"
+            "Jadu\\EmojiBundle\\": "src/"
         }
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace HeyUpdate\EmojiBundle\DependencyInjection;
+namespace Jadu\EmojiBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class HeyUpdateEmojiExtensionTest extends \PHPUnit_Framework_TestCase
+class JaduEmojiExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function testRegistersEmojiService()
     {
@@ -61,7 +61,7 @@ class HeyUpdateEmojiExtensionTest extends \PHPUnit_Framework_TestCase
 
     private function loadConfig(ContainerBuilder $container, array $config = [])
     {
-        $extension = new HeyUpdateEmojiExtension();
+        $extension = new JaduEmojiExtension();
 
         $extension->load([$config], $container);
     }
