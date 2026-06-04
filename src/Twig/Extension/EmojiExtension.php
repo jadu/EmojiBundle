@@ -19,7 +19,7 @@ class EmojiExtension extends AbstractExtension
     /**
      * {@inheritdoc}
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
@@ -37,7 +37,7 @@ class EmojiExtension extends AbstractExtension
     /**
      * {@inheritdoc}
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter('emoji', [$this->emoji, 'replaceEmojiWithImages'], [
@@ -52,13 +52,4 @@ class EmojiExtension extends AbstractExtension
         ];
     }
 
-    /**
-     * Returns the name of the extension.
-     *
-     * @return string The extension name
-     */
-    public function getName()
-    {
-        return 'emoji';
-    }
 }
