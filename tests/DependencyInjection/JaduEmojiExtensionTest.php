@@ -4,7 +4,9 @@ namespace Jadu\EmojiBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class JaduEmojiExtensionTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class JaduEmojiExtensionTest extends TestCase
 {
     public function testRegistersEmojiService()
     {
